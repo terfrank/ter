@@ -1,299 +1,508 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Terence Frank Y. P. | Software Engineering Graduate, Applied AI</title>
-<meta name="description" content="Software Engineering graduate focused on applied AI, Python, backend development and intelligent automation. UK-based and open to graduate and junior roles.">
+<title>Terence Frank — Backend &amp; AI Software Engineer</title>
+<meta name="description" content="Terence Frank, Backend and AI Software Engineer in Portsmouth, UK. Python and TypeScript services, AI tooling and tested backends. Open to junior and graduate roles.">
 <meta name="author" content="Terence Frank Y. P.">
+<meta name="theme-color" content="#0A0A0A">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Terence Frank Y. P. | Software Engineering Graduate">
-<meta property="og:description" content="I build software and AI-powered tools that solve practical problems. Applied AI, Python, backend development and automation.">
+<meta property="og:title" content="Terence Frank — Backend &amp; AI Software Engineer">
+<meta property="og:description" content="Backend services and AI tooling in Python and TypeScript. Selected work: Scam Campaign Linker, Relay Doctor, Fleo.">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#17191c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230A0A0A'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-weight='700' font-size='15' fill='%23F2F2F0'%3ETF%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Terence Frank Y. P.","jobTitle":"Software Engineering Graduate","email":"terencefrank2004@gmail.com","alumniOf":"University of Greenwich","sameAs":["https://github.com/terfrank","https://www.linkedin.com/in/terence-yohan-raju-pushpa-0364a9293/"]}
+{"@context":"https://schema.org","@type":"Person","name":"Terence Frank Y. P.","jobTitle":"Backend and AI Software Engineer","email":"terencefrank2004@gmail.com","alumniOf":"University of Greenwich","homeLocation":"Portsmouth, UK","sameAs":["https://github.com/terfrank","https://www.linkedin.com/in/terence-yohan-raju-pushpa-0364a9293/"]}
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js')</script>
 <style>
 :root{
-  --bg:#17191c; --surface:#1f2226; --line:#32363c; --ink:#eceee9; --muted:#a6aca4; --accent:#ff7a3d; --accent-ink:#1c0e06;
-  --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --bg:#0A0A0A; --panel:#121212; --line:#262626; --line-2:#333;
+  --fg:#F2F2F0; --muted:#8E8E8A; --faint:#7A7A75;
+  --accent:#FF8A00;
+  --font:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Menlo,Consolas,monospace;
+  --gutter:clamp(20px,4vw,56px);
+  --section:clamp(120px,13vw,200px);
+  --ease:cubic-bezier(.2,.7,.2,1);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:6rem}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 var(--font)}
-a{color:var(--ink);text-decoration-color:var(--accent);text-underline-offset:3px;text-decoration-thickness:2px}
-a:hover{color:var(--accent)}
-:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:3px}
-.wrap{max-width:66rem;margin:0 auto;padding:0 1.5rem}
-.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--accent);color:var(--accent-ink);padding:.5rem 1rem;z-index:20}
+*,*::before,*::after{box-sizing:border-box}
+html{color-scheme:dark;scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+a,button{touch-action:manipulation;-webkit-tap-highlight-color:transparent}
+h1,h2,h3,.intro,.p-title,.board h4{text-wrap:balance}
+.p-desc,.xp p,.contact-grid p{text-wrap:pretty}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.65 var(--font);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{display:block;max-width:100%;height:auto}
+::selection{background:var(--accent);color:var(--bg)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.wrap{max-width:1440px;margin:0 auto;padding-inline:var(--gutter)}
+.label{font-size:12px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.skip{position:absolute;left:var(--gutter);top:-60px;z-index:50;background:var(--fg);color:var(--bg);padding:10px 14px;font-weight:600;text-decoration:none}
+.skip:focus{top:12px}
 
-header{position:sticky;top:0;z-index:10;background:rgba(23,25,28,.95);border-bottom:1px solid var(--line)}
-.bar{display:flex;align-items:center;justify-content:space-between;min-height:4rem;gap:1rem;flex-wrap:wrap}
-.brand{font-weight:800;text-decoration:none;letter-spacing:-.01em}
-nav ul{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;list-style:none;margin:0;padding:0;align-items:center}
-nav a{text-decoration:none;color:var(--muted);font-size:.98rem}
-nav a:hover{color:var(--ink)}
-.menu{display:none;background:none;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:.45rem .8rem;font:inherit;cursor:pointer}
+/* links: underline on hover, accent colour, 250ms */
+.tlink{color:var(--fg);text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:.28em;
+  transition:color .25s ease,text-decoration-color .25s ease}
+.tlink:hover,.tlink:focus-visible{color:var(--accent);text-decoration-color:currentColor}
+.arrow{display:inline-block;transition:transform .25s ease}
+.tlink:hover .arrow,.tlink:focus-visible .arrow{transform:translateX(5px)}
 
-.btn{display:inline-block;padding:.75rem 1.25rem;border-radius:6px;font-weight:600;text-decoration:none;border:2px solid var(--line);color:var(--ink)}
-.btn:hover{border-color:var(--accent);color:var(--accent)}
-.btn.main{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
-.btn.main:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
-nav .btn{padding:.4rem .9rem;font-size:.95rem;color:var(--ink)}
+/* header */
+.top{position:fixed;inset:0 0 auto 0;z-index:20;background:rgba(10,10,10,.82);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-bottom:1px solid transparent;transition:border-color .3s ease}
+.top.scrolled{border-bottom-color:var(--line)}
+.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:64px;gap:16px}
+.brand{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--fg);text-decoration:none;justify-self:start;transition:color .25s ease}
+.brand:hover{color:var(--accent)}
+.status{font-size:12px;letter-spacing:.06em;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.status .dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--fg);margin-right:9px;vertical-align:1px;opacity:.75}
+.nav{justify-self:end;display:flex;gap:clamp(18px,2.6vw,40px);margin:0;padding:0;list-style:none}
+.nav a{font-size:12px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
 
-.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:3.5rem;align-items:center;padding:5rem 0 5.5rem}
-h1{font-size:clamp(2.4rem,6vw,4.3rem);line-height:1.04;letter-spacing:-.035em;font-weight:800;margin:0 0 1.2rem}
-.sub{color:var(--accent);font-weight:600;margin:0 0 1.2rem}
-.intro{color:var(--muted);max-width:34rem;margin:0 0 1.8rem}
-.row{display:flex;flex-wrap:wrap;gap:.8rem}
-.social{margin-top:1.6rem;display:flex;gap:1.4rem;flex-wrap:wrap;font-weight:600}
-.open{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.6rem}
-.open h2{font-size:1.05rem;margin:0 0 1rem;font-weight:600;color:var(--muted)}
-.open ul{list-style:none;margin:0;padding:0}
-.open li{padding:.55rem 0 .55rem 1.3rem;border-top:1px solid var(--line);position:relative}
-.open li:first-child{border-top:0}
-.open li::before{content:"";position:absolute;left:0;top:1.05rem;width:.5rem;height:.5rem;background:var(--accent);border-radius:50%}
+/* hero */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding-top:96px;padding-bottom:clamp(28px,4vw,48px);position:relative}
+.hero h1{margin:0;font-size:clamp(3.4rem,15.2vw,16rem);line-height:.84;font-weight:600;letter-spacing:-.055em;text-transform:uppercase;margin-left:-.04em}
+.hero h1 span{display:block}
+.tagline{margin:clamp(22px,3vw,40px) 0 0;font-size:clamp(1.15rem,2.1vw,1.75rem);line-height:1.3;font-weight:400;letter-spacing:-.01em;color:var(--fg)}
+.tagline .muted{color:var(--muted)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;margin-top:clamp(56px,10vh,120px);gap:24px}
+.scroll{display:inline-flex;flex-direction:column;align-items:center;gap:12px;color:var(--muted);text-decoration:none;font-size:11px;letter-spacing:.24em;text-transform:uppercase;transition:color .25s ease;position:absolute;left:50%;bottom:clamp(28px,4vw,48px);transform:translateX(-50%)}
+.scroll:hover{color:var(--fg)}
+.scroll i{display:block;width:1px;height:44px;background:currentColor;animation:cue 2.8s ease-in-out infinite}
+@keyframes cue{0%,100%{transform:translateY(-6px);opacity:.25}50%{transform:translateY(6px);opacity:1}}
+.hero .status{visibility:hidden}
+.hero-foot .label{text-align:right}
 
-section{padding:4rem 0;border-top:1px solid var(--line)}
-h2.t{font-size:2rem;letter-spacing:-.025em;font-weight:800;margin:0 0 .6rem}
-.lede{color:var(--muted);max-width:42rem;margin:0 0 2.2rem}
+/* sections */
+section.block{padding-block:var(--section)}
+.block + .block{border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:clamp(48px,7vw,96px);gap:24px}
 
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:1.7rem}
-.card h3{margin:0 0 .5rem;font-size:1.3rem;letter-spacing:-.015em}
-.tag{display:inline-block;font-size:.85rem;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:.15rem .75rem;margin-bottom:.9rem}
-.tag.feat{border-color:var(--accent);color:var(--accent)}
-.facts{display:grid;gap:.9rem;margin:1.2rem 0 0}
-.facts div{display:grid;grid-template-columns:8.5rem 1fr;gap:.2rem 1.2rem}
-.facts dt{color:var(--muted)}
-.facts dd{margin:0}
-.chips{display:flex;flex-wrap:wrap;gap:.4rem;padding:0;margin:0;list-style:none}
-.chips li{background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:.1rem .6rem;font-size:.92rem}
-.chips.soft li{color:var(--muted);border-style:dashed}
-details{margin-top:1.2rem;border-top:1px solid var(--line);padding-top:.9rem;color:var(--muted);font-size:.95rem}
-summary{cursor:pointer;color:var(--ink)}
-details p{margin:.6rem 0 0}
-.pair{display:grid;grid-template-columns:1fr 1fr;gap:1.4rem;margin-top:1.4rem}
+/* about */
+.intro{margin:0;max-width:24ch;font-size:clamp(1.75rem,4.1vw,3.6rem);line-height:1.12;font-weight:500;letter-spacing:-.03em}
+.intro .muted{color:var(--muted)}
+.meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:clamp(56px,7vw,96px) 0 0;padding-top:24px;border-top:1px solid var(--line)}
+.meta div{min-width:0}
+.meta dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.meta dd{margin:0;font-size:clamp(1rem,1.35vw,1.2rem);line-height:1.4}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,6vw,96px);margin-top:clamp(80px,9vw,128px)}
+.cols h3{margin:0 0 28px}
+.xp{list-style:none;margin:0;padding:0}
+.xp li{padding:22px 0;border-top:1px solid var(--line)}
+.xp li:last-child{border-bottom:1px solid var(--line)}
+.xp .row{display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.xp strong{font-size:1.1rem;font-weight:500;letter-spacing:-.01em}
+.xp .when{font-size:13px;color:var(--muted);white-space:nowrap;font-variant-numeric:tabular-nums}
+.xp p{margin:8px 0 0;color:var(--muted);max-width:56ch}
+.skills{margin:0}
+.skills div{display:grid;grid-template-columns:9.5em 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--line)}
+.skills div:last-child{border-bottom:1px solid var(--line)}
+.skills dt{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.skills dd{margin:0}
 
-/* conceptual flow diagram */
-figure{margin:1.6rem 0 0}
-.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
-.flow li{background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:.9rem 1rem;position:relative}
-.flow li:not(:last-child)::after{content:"";position:absolute;right:-1.25rem;top:50%;width:1rem;height:2px;background:var(--accent)}
-.flow li:not(:last-child)::before{content:"";position:absolute;right:-1.3rem;top:calc(50% - 4px);border-left:7px solid var(--accent);border-top:5px solid transparent;border-bottom:5px solid transparent}
-.flow strong{display:block;color:var(--accent)}
-.flow span{color:var(--muted);font-size:.92rem;line-height:1.4;display:block;margin-top:.2rem}
-figcaption{color:var(--muted);font-size:.9rem;margin-top:.8rem;font-style:italic}
+/* work */
+.project{padding-block:clamp(64px,8vw,120px)}
+.project:first-of-type{padding-top:0}
+.project + .project{border-top:1px solid var(--line)}
+.p-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:clamp(24px,4vw,72px);align-items:end;margin-bottom:clamp(36px,4.5vw,64px)}
+.p-num{display:block;margin-bottom:20px;font-variant-numeric:tabular-nums}
+.p-title{margin:0;font-size:clamp(2.6rem,7.4vw,7.25rem);line-height:.92;font-weight:600;letter-spacing:-.045em}
+.p-desc{margin:0 0 20px;font-size:clamp(1.05rem,1.45vw,1.3rem);line-height:1.5;max-width:44ch}
+.p-facts{margin:0 0 22px;color:var(--muted);font-size:15px}
+.tags{list-style:none;margin:0 0 26px;padding:0;display:flex;flex-wrap:wrap;gap:8px 18px}
+.tags li{font-size:11.5px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.p-link{font-size:15px;font-weight:500;letter-spacing:.01em}
+.p-note{font-size:15px;color:var(--muted)}
 
-.job{display:grid;grid-template-columns:12rem 1fr;gap:1rem 2.5rem}
-.job h3{margin:0 0 .3rem;font-size:1.3rem}
-.job ul{margin:0;padding-left:1.1rem}
-.job li{margin-bottom:.4rem}
-.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
-.skills h3{font-size:1.05rem;margin:0 0 .3rem}
-.skills p{color:var(--muted);font-size:.93rem;margin:0 0 .9rem}
-.about p{max-width:40rem}
-.contact .links{display:flex;gap:1.6rem;flex-wrap:wrap;font-weight:600;font-size:1.1rem}
-footer{border-top:1px solid var(--line);padding:2rem 0 3rem;color:var(--muted);font-size:.92rem}
+/* media frames: same ratio for every project */
+.media{position:relative;aspect-ratio:16/10;background:var(--panel);overflow:hidden;container-type:inline-size;margin:0}
+.media img{width:100%;height:100%;object-fit:cover;object-position:left top}
+.term{position:absolute;inset:0;display:flex;flex-direction:column;font-family:var(--mono);font-size:clamp(9.5px,1.32cqi,17px);line-height:1.62;color:#C9C9C4}
+.term-bar{display:flex;align-items:center;gap:7px;padding:1.4cqi 2cqi;border-bottom:1px solid var(--line)}
+.term-bar b{width:9px;height:9px;border-radius:50%;background:var(--line-2)}
+.term-bar span{margin-left:10px;font-family:var(--font);font-size:clamp(10px,1cqi,13px);color:var(--faint);letter-spacing:.04em}
+.term pre{margin:0;padding:2.4cqi 3cqi;font:inherit;white-space:pre-wrap;overflow:hidden;flex:1}
+.term .p{color:var(--fg)}
+.term .d{color:var(--faint)}
+.term .w{color:var(--fg);font-weight:600}
 
-@media (max-width:820px){
-  .hero{grid-template-columns:1fr;gap:2.2rem;padding:2.5rem 0 3.5rem}
-  .js .menu{display:block}
-  .js nav ul{display:none;position:absolute;left:0;right:0;top:100%;background:var(--bg);flex-direction:column;align-items:flex-start;padding:1rem 1.5rem 1.5rem;border-bottom:1px solid var(--line);gap:1rem}
-  .js nav ul.show{display:flex}
-  .facts div,.job{grid-template-columns:1fr}
-  .pair,.skills{grid-template-columns:1fr}
-  .flow{grid-template-columns:1fr;gap:1.6rem}
-  .flow li:not(:last-child)::after{right:auto;left:50%;top:auto;bottom:-1.2rem;width:2px;height:.9rem}
-  .flow li:not(:last-child)::before{right:auto;left:calc(50% - 4px);top:auto;bottom:-1.45rem;border-top:7px solid var(--accent);border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:0}
+.board{position:absolute;inset:0;padding:6cqi;display:flex;flex-direction:column;justify-content:center;gap:4.5cqi}
+.board .cap{font-size:clamp(10px,1.05cqi,13px);letter-spacing:.16em;text-transform:uppercase;color:var(--faint)}
+.flow{display:flex;align-items:stretch;gap:1.4cqi;list-style:none;margin:0;padding:0}
+.flow li{flex:1;min-width:0;border-top:1px solid var(--line-2);padding-top:1.6cqi;position:relative}
+.flow li.key{border-top-color:var(--fg)}
+.flow small{display:block;font-size:clamp(9.5px,1cqi,13px);letter-spacing:.14em;text-transform:uppercase;color:var(--faint);margin-bottom:.8cqi;font-variant-numeric:tabular-nums}
+.flow span{display:block;font-size:clamp(12px,2cqi,26px);line-height:1.25;letter-spacing:-.01em;color:var(--fg)}
+.flow em{display:block;font-style:normal;margin-top:.8cqi;font-size:clamp(10px,1.3cqi,17px);line-height:1.4;color:var(--muted)}
+.board h4{margin:0;font-size:clamp(1.25rem,4.4cqi,3.6rem);line-height:1.05;font-weight:600;letter-spacing:-.035em;max-width:18ch;color:var(--fg)}
+.big{font-size:clamp(3rem,13cqi,11rem);line-height:.85;font-weight:600;letter-spacing:-.05em}
+.big + p{margin:1.5cqi 0 0;font-size:clamp(12px,1.9cqi,25px);color:var(--muted);max-width:30ch;line-height:1.35}
+.fare{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:5cqi;align-items:center}
+.fare svg{width:100%;height:auto;overflow:visible}
+
+/* contact */
+.talk{margin:0;font-size:clamp(3.4rem,13vw,13rem);line-height:.86;font-weight:600;letter-spacing:-.055em;text-transform:uppercase;margin-left:-.04em}
+.contact-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);margin-top:clamp(56px,7vw,96px);align-items:end}
+.contact-grid p{margin:0;max-width:40ch;color:var(--muted);font-size:clamp(1.05rem,1.4vw,1.25rem)}
+.copy{appearance:none;border:0;background:none;color:var(--fg);font:inherit;font-size:clamp(1.4rem,3.4vw,3rem);font-weight:500;letter-spacing:-.03em;line-height:1.15;padding:0;cursor:pointer;text-align:left;
+  text-decoration:underline;text-decoration-color:transparent;text-decoration-thickness:1px;text-underline-offset:.2em;transition:color .25s ease,text-decoration-color .25s ease;overflow-wrap:normal}
+.copy:hover,.copy:focus-visible{color:var(--accent);text-decoration-color:currentColor}
+.copy-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px;margin-bottom:14px}
+.copied{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);min-width:7em}
+.hint{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint)}
+.socials{list-style:none;margin:clamp(48px,6vw,72px) 0 0;padding:28px 0 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:16px clamp(28px,4vw,56px)}
+.socials a{font-size:13px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+
+footer{border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding-block:28px;font-size:12px;letter-spacing:.06em;color:var(--muted)}
+footer a{font-size:12px;letter-spacing:.14em;text-transform:uppercase}
+
+/* scroll reveal (only when JS runs; everything stays visible without it) */
+.js .reveal{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .scroll i{animation:none}
+  .js .reveal{opacity:1;transform:none;transition:none}
+  .tlink,.copy,.arrow,.brand,.top{transition:none}
 }
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+@media (max-width:1020px){
+  .top .wrap{grid-template-columns:1fr auto}
+  .top .status{display:none}
+  .hero .status{visibility:visible}
+  .meta{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:32px}
+  .cols,.p-head,.contact-grid{grid-template-columns:minmax(0,1fr)}
+  .p-head{align-items:start}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .nav{gap:16px}
+  .nav a,.brand{letter-spacing:.12em;font-size:11px}
+  .scroll{display:none}
+  .hero-foot{flex-direction:column;align-items:flex-start;gap:10px}
+  .hero-foot .label{text-align:left}
+  .meta{grid-template-columns:minmax(0,1fr)}
+  .skills div{grid-template-columns:minmax(0,1fr);gap:4px}
+  .xp .row{flex-direction:column;gap:2px}
+  .copy{font-size:clamp(1rem,5.6vw,1.6rem);overflow-wrap:anywhere}
+  .hero h1{font-size:19vw}
+  .media{aspect-ratio:4/5}
+  .media img{object-position:22% top}
+  .board{padding:7cqi;justify-content:flex-start;gap:7cqi}
+  .flow{flex-direction:column;gap:0}
+  .flow li{padding:2.4cqi 0}
+  .flow:has(li:nth-child(5)) em{display:none}
+  .flow small{font-size:10px;margin-bottom:4px}
+  .flow span{font-size:15px}
+  .flow em{font-size:12.5px;margin-top:3px}
+  .fare{grid-template-columns:minmax(0,1fr);gap:9cqi}
+  .board h4{display:none}
+  .big{font-size:24cqi}
+  .big + p{font-size:15px}
+  footer .wrap{flex-direction:column;align-items:flex-start}
+}
 </style>
-<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-<header>
-  <div class="wrap bar">
-    <a class="brand" href="#home">Terence Frank Y. P.</a>
-    <button class="menu" id="menu" aria-expanded="false" aria-controls="nav-list">Menu</button>
+
+<header class="top" id="top-bar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Terence Frank, back to top">Terence Frank</a>
+    <p class="status" aria-label="Location and local time"><span class="dot" aria-hidden="true"></span>Based in Portsmouth, UK<span data-clock></span></p>
     <nav aria-label="Main">
-      <ul id="nav-list">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a class="btn" href="mailto:terencefrank2004@gmail.com?subject=CV%20request&amp;body=Hi%20Terence%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20CV.%0A%0ABest%2C%0A">Request CV by email</a></li>
+      <ul class="nav">
+        <li><a class="tlink" href="#work">Work</a></li>
+        <li><a class="tlink" href="#about">About</a></li>
+        <li><a class="tlink" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<main id="main" class="wrap">
-  <div class="hero" id="home">
-    <div>
-      <h1>I build software and AI-powered tools that solve practical problems.</h1>
-      <p class="sub">Software Engineering Graduate | Python | Backend Development | Applied AI</p>
-      <p class="intro">I'm a Software Engineering graduate from the University of Greenwich interested in backend development and applied AI. I enjoy turning requirements into practical software, working with data and APIs, and explaining technical decisions clearly.</p>
-      <div class="row">
-        <a class="btn main" href="#projects">Explore projects</a>
-        <a class="btn" href="#contact">Contact me</a>
-      </div>
-      <div class="social">
-        <a href="https://github.com/terfrank" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/terence-yohan-raju-pushpa-0364a9293/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
+<main id="main">
+  <div class="hero wrap" id="top">
+    <h1 aria-label="Terence Frank"><span>Terence</span><span>Frank</span></h1>
+    <p class="tagline">Backend &amp; AI Software Engineer <span class="muted">— Python, TypeScript and tested services.</span></p>
+    <div class="hero-foot">
+      <p class="status" aria-hidden="true"><span class="dot"></span>Based in Portsmouth, UK<span data-clock></span></p>
+      <p class="label">Open to junior &amp; graduate roles</p>
     </div>
-    <aside class="open" aria-label="Roles I am looking for">
-      <h2>Open to UK graduate and junior roles in</h2>
-      <ul>
-        <li>Applied AI engineering</li>
-        <li>AI automation and LLM integration</li>
-        <li>Software engineering</li>
-        <li>Backend development</li>
-        <li>Python and data engineering</li>
-      </ul>
-    </aside>
+    <a class="scroll" href="#about" aria-label="Scroll to About">Scroll<i aria-hidden="true"></i></a>
   </div>
 
-  <section id="projects" aria-labelledby="projects-h">
-    <h2 class="t" id="projects-h">Selected projects</h2>
-    <p class="lede">A selection of software engineering, data and AI projects. Project details and performance claims are limited to information that can be substantiated; repository and demo links will be added when verified.</p>
-
-    <article class="card">
-      <span class="tag feat">Featured case study</span>
-      <h3>Relay Doctor — Agent Relay Diagnostics CLI</h3>
-      <p>A command-line tool for diagnosing Agent Relay configuration and workspace issues, with troubleshooting guidance for what it finds.</p>
-      <dl class="facts">
-        <div><dt>Purpose</dt><dd>Help users find configuration and workspace problems and understand how to resolve them.</dd></div>
-        <div><dt>What it checks</dt><dd>Workspace pins, enrollment information, legacy directories and configuration conflicts, plus log analysis that maps recognised patterns to troubleshooting guidance.</dd></div>
-        <div><dt>Reliability</dt><dd>Returns <code>UNKNOWN</code> for unrecognised patterns instead of guessing, validates input, redacts secrets and is covered by automated tests.</dd></div>
-        <div><dt>My role</dt><dd>Project contribution and implementation details to be confirmed against the source repository.</dd></div>
-        <div><dt>Technologies</dt><dd><ul class="chips"><li>TypeScript</li><li>Node.js</li><li>Vitest</li><li>JSON</li><li>CLI tooling</li></ul></dd></div>
+  <section class="block" id="about" aria-labelledby="about-h">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2 class="label" id="about-h">About</h2><span class="label">(01)</span></div>
+      <p class="intro reveal">I build backend services and AI tooling in Python and TypeScript. <span class="muted">Software Engineering graduate from the University of Greenwich, with 227 automated tests across three projects, CI and typed code.</span></p>
+      <dl class="meta reveal">
+        <div><dt>Role</dt><dd>Backend &amp; AI Engineer</dd></div>
+        <div><dt>Based</dt><dd>Portsmouth, UK</dd></div>
+        <div><dt>Open to</dt><dd>Junior / Graduate roles</dd></div>
+        <div><dt>Education</dt><dd>BEng (Hons) Software Engineering, Greenwich, 2026</dd></div>
       </dl>
-      <p><a href="https://github.com/terfrank" target="_blank" rel="noopener">View GitHub profile</a></p>
-      <details><summary>Technical notes</summary><p>Replace the profile link with the direct Relay Doctor repository once confirmed. Add test counts and measured results only after running and reviewing the test suite.</p></details>
-    </article>
 
-    <div class="pair">
-      <article class="card">
-        <span class="tag">Final-year project</span>
-        <h3>Retail Demand Forecasting and Inventory Planning System</h3>
-        <p>A data-driven project exploring how historical retail sales can inform demand forecasts and inventory planning.</p>
-        <dl class="facts">
-          <div><dt>Engineering problem</dt><dd>Preparing historical sales data, evaluating forecasting approaches and presenting outputs in a form that supports stock-planning decisions.</dd></div>
-          <div><dt>Implementation</dt><dd>Data preparation, model evaluation and API/dashboard workflow, subject to verification against the available project files.</dd></div>
-          <div><dt>Technologies</dt><dd><ul class="chips"><li>Python</li><li>Pandas</li><li>scikit-learn</li><li>statsmodels</li><li>SQL</li><li>REST API</li><li>JavaScript</li><li>Chart.js</li></ul></dd></div>
-        </dl>
-        <figure>
-          <ol class="flow" aria-label="Conceptual demand forecasting workflow">
-            <li><strong>Prepare data</strong><span>Clean and structure historical sales</span></li>
-            <li><strong>Forecast</strong><span>Evaluate suitable prediction methods</span></li>
-            <li><strong>Expose results</strong><span>Make forecasts available through an API</span></li>
-            <li><strong>Visualise</strong><span>Present patterns for review</span></li>
-          </ol>
-          <figcaption>Conceptual workflow, not a screenshot of a running application.</figcaption>
+      <div class="cols">
+        <div class="reveal">
+          <h3 class="label">Experience</h3>
+          <ul class="xp">
+            <li>
+              <div class="row"><strong>Web Developer (part-time), Elaka Food City</strong><span class="when">Dec 2024 – Mar 2025</span></div>
+              <p>Built the store’s e-commerce site end to end in Next.js and Supabase: 46 product categories, sign-up, login and order history, an admin panel for staff, and same-day and UK-wide delivery rules. Maintained it in production.</p>
+            </li>
+            <li>
+              <div class="row"><strong>Lucent Systems</strong></div>
+              <p>Backend and frontend work on digital products, and client-facing sales: understanding what prospective clients need and connecting it to a technical solution.</p>
+            </li>
+            <li>
+              <div class="row"><strong>J.P. Morgan Software Engineering Job Simulation</strong><span class="when">Forage</span></div>
+              <p>Virtual work experience.</p>
+            </li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="label">Skills</h3>
+          <dl class="skills">
+            <div><dt>Languages</dt><dd>Python, TypeScript, JavaScript, Java, C++, SQL, HTML/CSS</dd></div>
+            <div><dt>Backend &amp; AI</dt><dd>FastAPI, Flask, Node.js, Next.js, React, REST APIs, LLM workflows, RAG, n8n</dd></div>
+            <div><dt>Data &amp; cloud</dt><dd>PostgreSQL, Supabase, SQLAlchemy, Vercel, Pandas, scikit-learn, statsmodels</dd></div>
+            <div><dt>Engineering</dt><dd>Docker, GitHub Actions, Git, code review, Linux, pytest, Vitest</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="sec-head reveal"><h2 class="label" id="work-h">Selected work</h2><span class="label">(02)</span></div>
+
+      <article class="project" aria-labelledby="p1">
+        <div class="p-head">
+          <div class="reveal"><span class="label p-num">01 / 05</span><h3 class="p-title" id="p1">Scam Campaign Linker</h3></div>
+          <div class="reveal">
+            <p class="p-desc">A passive, defensive API that collects 9 passive signals per suspicious site and groups sites sharing infrastructure into campaigns, with every score explained.</p>
+            <p class="p-facts">Safe fetcher with no JavaScript, SSRF checks and size limits. 119 pytest tests in CI with ruff and mypy.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>SQLAlchemy</li><li>pytest</li><li>Docker</li><li>GitHub Actions</li></ul>
+            <a class="tlink p-link" href="https://github.com/terfrank/scam-campaign-linker" target="_blank" rel="noopener">View code <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <figure class="media reveal">
+          <img src="assets/scam-campaign-linker.png" width="1600" height="1000" loading="lazy" decoding="async"
+            alt="The campaign graph page running on the project's offline demo data: four fictional sites linked into one campaign at confidence 0.95 by a shared favicon, TLS certificate and page structure, with two weakly related sites kept apart.">
         </figure>
-        <details><summary>Evaluation and limitations</summary><p>Forecast metrics, dataset size and any percentage improvement should be added only after checking the actual model outputs and baseline comparison. No unverified performance figures are claimed here.</p></details>
       </article>
 
-      <article class="card">
-        <span class="tag">AI / Research</span>
-        <h3>Autonomous arXiv Paper Digest &amp; QA Agent</h3>
-        <p>An AI research-assistant concept for processing academic papers, producing summaries and answering questions grounded in source documents.</p>
-        <dl class="facts">
-          <div><dt>Engineering focus</dt><dd>Document ingestion, retrieval, prompt orchestration and source-grounded question answering, where confirmed in the repository.</dd></div>
-          <div><dt>Technologies</dt><dd><ul class="chips"><li>Python</li><li>LLM workflows</li><li>RAG</li><li>PDF processing</li><li>LangGraph / Gemini (verify)</li></ul></dd></div>
-        </dl>
-        <p><a href="https://github.com/devuu05" target="_blank" rel="noopener">View source profile</a></p>
-        <details><summary>Technical notes</summary><p>Replace the profile link with the exact project repository after confirming it. Only retain framework and provider names that the source code actually uses.</p></details>
+      <article class="project" aria-labelledby="p2">
+        <div class="p-head">
+          <div class="reveal"><span class="label p-num">02 / 05</span><h3 class="p-title" id="p2">Relay Doctor</h3></div>
+          <div class="reveal">
+            <p class="p-desc">A command-line tool that finds Agent Relay configuration drift and explains log failures, and answers UNKNOWN instead of guessing.</p>
+            <p class="p-facts">4 classes of drift, 8 known failure signatures, 6 token formats redacted. 42 Vitest tests.</p>
+            <ul class="tags" aria-label="Tech stack"><li>TypeScript</li><li>Node.js</li><li>Vitest</li><li>JSON</li></ul>
+            <a class="tlink p-link" href="https://github.com/terfrank/Relay_doctor" target="_blank" rel="noopener">View code <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <figure class="media reveal" role="img" aria-label="Terminal output from relay-doctor: check reports two drift warnings in a test project, and explain reports UNKNOWN for a log line it does not recognise.">
+          <div class="term" aria-hidden="true">
+            <div class="term-bar"><b></b><b></b><b></b><span>relay-doctor</span></div>
+<pre><span class="p">$ relay-doctor check --cwd .</span>
+Relay Doctor Check: .
+<span class="d">==================================================</span>
+Status: <span class="w">[WARN]</span> - Node or workspace drift warnings detected.
+
+Checks:
+  <span class="w">[WARN]</span> Legacy Project State (legacy-project-directory-drift)
+    Message: Legacy directory .agent-relay exists alongside modern .agentworkforce/relay.
+    Fix:     Remove stale .agent-relay directory to prevent state split and accidental fallback.
+  <span class="w">[WARN]</span> Workspace Pin vs Fleet Enrollment (pin-shadows-fleet-enrollment)
+    Source:  Issue #1432, PR #1439
+
+<span class="p">$ relay-doctor explain --input "fatal: broker refused connection on port 3888"</span>
+Status: <span class="w">[UNKNOWN]</span> - No recognizable node/workspace drift patterns found in input log.
+    Diagnosis: The provided log does not match any known node/workspace drift signatures.
+               Relay-doctor will not guess.</pre>
+          </div>
+        </figure>
       </article>
 
-      <article class="card">
-        <span class="tag">Web application</span>
-        <h3>Fleo — Flight Deal Alert Application</h3>
-        <p>A flight-deal alert application intended to help travellers discover relevant offers and receive useful notifications.</p>
-        <dl class="facts">
-          <div><dt>Engineering focus</dt><dd>Review the application's data flow, API integrations and alerting behaviour against the repository before making detailed implementation claims.</dd></div>
-          <div><dt>Technologies</dt><dd><ul class="chips"><li>TypeScript</li><li>Web development</li><li>API integration (verify)</li></ul></dd></div>
-          <div><dt>Contribution</dt><dd>Individual contribution should be described accurately and distinguished from other contributors.</dd></div>
-        </dl>
-        <p><a href="https://github.com/devuu05/Fleo" target="_blank" rel="noopener">View Fleo repository</a></p>
+      <article class="project" aria-labelledby="p3">
+        <div class="p-head">
+          <div class="reveal"><span class="label p-num">03 / 05</span><h3 class="p-title" id="p3">Fleo</h3></div>
+          <div class="reveal">
+            <p class="p-desc">Flight-deal alerts that track fares on 360 routes and flag any that fall 40% or more below their 30-day median.</p>
+            <p class="p-facts">Cold-start guard, server-side premium gating, magic-link auth and a rate-limited flight-data client with retry backoff. 66 Vitest tests.</p>
+            <ul class="tags" aria-label="Tech stack"><li>TypeScript</li><li>Next.js</li><li>React</li><li>PostgreSQL</li><li>Drizzle ORM</li><li>Supabase</li><li>Vitest</li></ul>
+            <a class="tlink p-link" href="https://github.com/devuu05/Fleo" target="_blank" rel="noopener">View code <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <figure class="media reveal" role="img" aria-label="Diagram of Fleo's alert rule: a fare is flagged when it drops 40 percent or more below its 30-day median.">
+          <div class="board" aria-hidden="true">
+            <span class="cap">The alert rule · schematic, not real fares</span>
+            <div class="fare">
+              <div><div class="big">−40%</div><p>below the route’s 30-day median fare, across 360 routes.</p></div>
+              <svg viewBox="0 0 600 300" role="presentation">
+                <line x1="0" y1="130" x2="600" y2="130" stroke="#8E8E8A" stroke-width="1.5" stroke-dasharray="6 7"/>
+                <text x="600" y="98" text-anchor="end" fill="#8E8E8A" font-family="Inter,Arial,sans-serif" font-size="17" letter-spacing="2">30-DAY MEDIAN</text>
+                <line x1="0" y1="212" x2="600" y2="212" stroke="#7A7A75" stroke-width="1"/>
+                <text x="0" y="238" fill="#8E8E8A" font-family="Inter,Arial,sans-serif" font-size="17" letter-spacing="2">−40% THRESHOLD</text>
+                <polyline points="0,120 50,140 100,112 150,134 200,122 250,146 300,118 350,136 400,128 445,150 490,248 535,170 600,138" fill="none" stroke="#F2F2F0" stroke-width="2.5" stroke-linejoin="round"/>
+                <circle cx="490" cy="248" r="9" fill="#0A0A0A" stroke="#F2F2F0" stroke-width="2.5"/>
+                <text x="490" y="286" text-anchor="middle" fill="#F2F2F0" font-family="Inter,Arial,sans-serif" font-size="17" letter-spacing="2">ALERT</text>
+              </svg>
+            </div>
+          </div>
+        </figure>
+      </article>
+
+      <article class="project" aria-labelledby="p4">
+        <div class="p-head">
+          <div class="reveal"><span class="label p-num">04 / 05</span><h3 class="p-title" id="p4">Retail Demand Forecasting</h3></div>
+          <div class="reveal">
+            <p class="p-desc">A pipeline that cleans historical retail sales, benchmarks statistical against machine-learning forecasts, and serves the chosen model to a dashboard.</p>
+            <p class="p-facts">Final-year project. Models compared on forecast-error measures to choose one for stock planning.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Python</li><li>Pandas</li><li>scikit-learn</li><li>statsmodels</li><li>SQL</li><li>FastAPI</li></ul>
+            <span class="p-note">Final-year project, code not public</span>
+          </div>
+        </div>
+        <figure class="media reveal" role="img" aria-label="Pipeline diagram: historical sales are cleaned, statistical and machine-learning forecasts are benchmarked, and the chosen model is served through a FastAPI endpoint to a dashboard.">
+          <div class="board" aria-hidden="true">
+            <span class="cap">Pipeline</span>
+            <h4>From raw sales to a forecast on a dashboard.</h4>
+            <ol class="flow">
+              <li><small>01</small><span>Historical sales</span><em>Retail sales data, cleaned and validated</em></li>
+              <li class="key"><small>02</small><span>Benchmark</span><em>statsmodels vs scikit-learn on forecast error</em></li>
+              <li><small>03</small><span>Chosen model</span><em>Picked for stock planning</em></li>
+              <li><small>04</small><span>FastAPI endpoint</span><em>Serves the forecasts</em></li>
+              <li><small>05</small><span>Dashboard</span><em>Trends and predictions for review</em></li>
+            </ol>
+          </div>
+        </figure>
+      </article>
+
+      <article class="project" aria-labelledby="p5">
+        <div class="p-head">
+          <div class="reveal"><span class="label p-num">05 / 05</span><h3 class="p-title" id="p5">arXiv Paper Digest &amp; QA Agent</h3></div>
+          <div class="reveal">
+            <p class="p-desc">A research assistant that reads academic PDFs and answers questions grounded in the passages it retrieved, so every answer traces back to the paper.</p>
+            <p class="p-facts">Retrieval-augmented generation over parsed PDFs, with structured summaries.</p>
+            <ul class="tags" aria-label="Tech stack"><li>Python</li><li>LLMs</li><li>RAG</li><li>PDF processing</li></ul>
+            <a class="tlink p-link" href="https://github.com/devuu05/autonomous-arxiv-paper-digest-qa-agent" target="_blank" rel="noopener">View code <span class="arrow" aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <figure class="media reveal" role="img" aria-label="Diagram of the RAG flow: academic PDFs are parsed, relevant passages are retrieved, and the answer cites the passages it used.">
+          <div class="board" aria-hidden="true">
+            <span class="cap">How an answer is made</span>
+            <h4>Every answer traces back to the paper.</h4>
+            <ol class="flow">
+              <li><small>01</small><span>Academic PDFs</span><em>Ingested and parsed into passages</em></li>
+              <li><small>02</small><span>Question</span><em>Asked about one or more papers</em></li>
+              <li><small>03</small><span>Retrieve</span><em>The passages most relevant to it</em></li>
+              <li class="key"><small>04</small><span>Grounded answer</span><em>Built only from those passages, with the source shown</em></li>
+            </ol>
+          </div>
+        </figure>
       </article>
     </div>
   </section>
 
-  <section id="experience" aria-labelledby="exp-h">
-    <h2 class="t" id="exp-h">Experience</h2>
-    <p class="lede">Hands-on technical work alongside business development.</p>
-    <div class="card job">
-      <div>
-        <h3>Lucent Systems</h3>
-        <a href="https://www.lucentsystems.co.uk/" target="_blank" rel="noopener">lucentsystems.co.uk</a>
+  <section class="block" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <div class="sec-head reveal"><span class="label">Contact</span><span class="label">(03)</span></div>
+      <h2 class="talk reveal" id="contact-h">Let’s talk</h2>
+      <div class="contact-grid reveal">
+        <p>Open to graduate and junior roles in the UK: backend development, applied AI and software engineering. Email is the quickest way to reach me, and I’m happy to send my CV.</p>
+        <div>
+          <div class="copy-row">
+            <button class="copy" type="button" data-copy="terencefrank2004@gmail.com" aria-describedby="copy-hint">terencefrank2004@gmail.com</button>
+          </div>
+          <span class="hint" id="copy-hint">Click to copy</span>
+          <span class="copied" data-copied role="status" aria-live="polite"></span>
+          <p style="margin-top:22px"><a class="tlink p-link" href="mailto:terencefrank2004@gmail.com?subject=CV%20request&amp;body=Hi%20Terence%2C%0A%0AI%20would%20like%20to%20request%20a%20copy%20of%20your%20CV.%0A%0ABest%2C%0A">Request my CV <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
       </div>
-      <div>
-        <p style="margin-top:0">My work with Lucent Systems has involved digital solutions and client-facing work. Confirm the exact title, dates and responsibilities before publishing:</p>
-        <ul>
-          <li><strong>Backend development:</strong> contributing to the logic and systems behind digital products.</li>
-          <li><strong>Frontend development:</strong> building user-facing website features and layouts.</li>
-          <li><strong>Sales and client work:</strong> speaking with prospective clients, understanding what they need and connecting it to a technical solution.</li>
-        </ul>
-        <p style="color:var(--muted);margin-bottom:0">Keep this section limited to responsibilities and outcomes that can be demonstrated or explained in an interview.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills" aria-labelledby="skills-h">
-    <h2 class="t" id="skills-h">Skills</h2>
-    <p class="lede">Grouped by the evidence behind them, so it's clear what I've used and what I'm still building.</p>
-    <div class="skills">
-      <div>
-        <h3>Project technologies</h3>
-        <p>Technologies to verify against each project's implementation.</p>
-        <ul class="chips"><li>Python</li><li>Java</li><li>SQL</li><li>JavaScript</li><li>TypeScript</li><li>REST APIs</li><li>Pandas</li><li>scikit-learn</li><li>Git and GitHub</li></ul>
-      </div>
-      <div>
-        <h3>Foundations from my degree</h3>
-        <p>Core concepts from my degree.</p>
-        <ul class="chips soft"><li>Data structures and algorithms</li><li>Object-oriented design</li><li>Operating systems</li><li>Machine learning fundamentals</li><li>Statistics</li><li>Linux</li><li>C and C++</li></ul>
-      </div>
-      <div>
-        <h3>Developing further</h3>
-        <p>Developing further; do not present as expert-level.</p>
-        <ul class="chips soft"><li>LLM APIs</li><li>FastAPI</li><li>Spring Boot</li></ul>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" class="about" aria-labelledby="about-h">
-    <h2 class="t" id="about-h">About</h2>
-    <p>I completed a BEng (Hons) in Software Engineering at the University of Greenwich in 2026. My studies covered algorithms, machine learning, operating systems and software design, and I have applied these foundations in projects involving data processing, forecasting, APIs and AI-assisted workflows.</p>
-    <p>I'm particularly interested in backend development and applied AI: connecting software components, working with data, and building tools that solve clearly defined problems. I also value testing, readable code and explaining technical decisions.</p>
-    <p>I'm looking for graduate and junior opportunities in the UK where I can contribute to useful software while continuing to develop as an engineer.</p>
-  </section>
-
-  <section id="contact" class="contact" aria-labelledby="contact-h">
-    <h2 class="t" id="contact-h">Contact</h2>
-    <p class="lede">The quickest way to reach me is by email. If you'd like my CV, ask and I'll send it.</p>
-    <div class="links">
-      <a href="mailto:terencefrank2004@gmail.com?subject=Hello%20Terence&amp;body=Hi%20Terence%2C%0A%0A">terencefrank2004@gmail.com</a>
-      <a href="https://www.linkedin.com/in/terence-yohan-raju-pushpa-0364a9293/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/terfrank" target="_blank" rel="noopener">GitHub</a>
+      <ul class="socials reveal">
+        <li><a class="tlink" href="https://www.linkedin.com/in/terence-yohan-raju-pushpa-0364a9293/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a class="tlink" href="https://github.com/terfrank" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a class="tlink" href="mailto:terencefrank2004@gmail.com">Email</a></li>
+      </ul>
     </div>
   </section>
 </main>
-<footer><div class="wrap">&copy; 2026 Terence Frank Y. P.</div></footer>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; 2026 Terence Frank</span>
+    <span class="status"><span class="dot" aria-hidden="true"></span>Based in Portsmouth, UK<span data-clock></span></span>
+    <a class="tlink" href="#top">Back to top <span aria-hidden="true">↑</span></a>
+  </div>
+</footer>
 
 <script>
-/* Only job: toggle the mobile menu. Without JavaScript the links simply wrap in the header. */
-var menu=document.getElementById("menu"),list=document.getElementById("nav-list");
-menu.addEventListener("click",function(){var o=list.classList.toggle("show");menu.setAttribute("aria-expanded",o)});
-list.addEventListener("click",function(e){if(e.target.tagName==="A"){list.classList.remove("show");menu.setAttribute("aria-expanded","false")}});
+(function () {
+  // Live UK time in every status line, updated each second.
+  var clocks = document.querySelectorAll('[data-clock]');
+  var fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/London', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZoneName: 'short' });
+  function tick() {
+    var parts = fmt.formatToParts(new Date()), t = {};
+    parts.forEach(function (p) { t[p.type] = p.value; });
+    var text = ' · ' + t.hour + ':' + t.minute + ':' + t.second + ' ' + (t.timeZoneName || '');
+    for (var i = 0; i < clocks.length; i++) clocks[i].textContent = text;
+  }
+  tick();
+  setInterval(tick, 1000);
+
+  // Header hairline once the page has scrolled.
+  var bar = document.getElementById('top-bar');
+  function onScroll() { bar.classList.toggle('scrolled', window.scrollY > 8); }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Scroll reveal: fade and slide up once, as each block enters the viewport.
+  var items = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+    items.forEach(function (el) { io.observe(el); });
+  } else {
+    items.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  // Click to copy the email, with "Copied!" for 2 seconds.
+  var btn = document.querySelector('[data-copy]');
+  var note = document.querySelector('[data-copied]');
+  var timer;
+  function done(ok) {
+    note.textContent = ok ? 'Copied!' : 'Press Ctrl+C to copy';
+    clearTimeout(timer);
+    timer = setTimeout(function () { note.textContent = ''; }, 2000);
+  }
+  function fallback(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    return ok;
+  }
+  btn.addEventListener('click', function () {
+    var text = btn.getAttribute('data-copy');
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(fallback(text)); });
+    } else {
+      done(fallback(text));
+    }
+  });
+})();
 </script>
 </body>
 </html>
