@@ -1,0 +1,23 @@
+# Graphify ignore rules (gitignore syntax). Secrets are never read.
+.env
+.env.*
+*.env
+*.env.txt
+*apikey*
+*api_key*
+*secret*
+*password*
+*credential*
+*.pem
+*.key
+
+# Build output, dependencies, vendored code
+node_modules/
+dist/
+build/
+.git/
+day-trader-skill/
+graphify-out/
+
+# Installed Claude skills (third-party, 39 MB)
+.claude/
